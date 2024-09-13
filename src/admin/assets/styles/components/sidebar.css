@@ -1,0 +1,418 @@
+* {
+  box-sizing: border-box;
+  font-family: "Outfit", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: var(--body-color);
+  height: 100vh;
+  min-height: 100vh;
+  transition: var(--tran-05);
+  width: 100%;
+}
+
+#cloud-img {
+  height: 24px; /* Ajusta el alto según tus necesidades */
+  margin-right: 10px; /* Ajusta el margen derecho según tus necesidades */
+  width: 24px; /* Ajusta el ancho según tus necesidades */
+}
+
+/*-----------------Menu*/
+.menu {
+  align-items: center;
+  background-color: var(--color-boton);
+  border-radius: 50%;
+  color: var(--color-boton-texto);
+  cursor: pointer;
+  display: none;
+  font-size: 30px;
+  height: 50px;
+  justify-content: center;
+  position: fixed;
+  right: 15px;
+  top: 15px;
+  width: 50px;
+  z-index: 100;
+}
+
+/*----------- Modal------------*/
+#agregar .modal-content,
+#detalleProductoModal .modal-content,
+#detalleBlogModal .modal-content,
+#modalVisualizar .modal-content,
+#tbody_anular .modal-content,
+#modal_modificar .modal-content,
+#modal .modal-content,
+#modal_respuesta .modal-content,
+#eliminar .modal-content {
+  background-color: var(--sidebar-color);
+  color: var(--text-color);
+}
+
+/* Estilos personalizados para SweetAlert */
+.custom-swal-container {
+  /* Estilo del contenedor principal */
+  background-color: var(--sidebar-color);
+  color: var(--text-color);
+}
+
+.custom-swal-popup {
+  /* Estilo del cuadro de diálogo de SweetAlert */
+  background-color: var(--sidebar-color);
+  color: var(--text-color);
+}
+
+.custom-swal-confirm-button {
+  /* Estilo del botón de confirmación */
+  background-color: var(--sidebar-color);
+  color: var(--text-color);
+}
+
+.form-label {
+  background-color: var(--sidebar-color);
+  color: var(--text-color);
+}
+
+.form-control {
+  background-color: var(--sidebar-color);
+  color: var(--text-color);
+}
+
+.custom-icon {
+  background-image: url("../../../assets/img/logo.png");
+  background-size: 100%;
+  border-radius: 50%;
+  height: 48px; /* Aumenta el tamaño del contenedor */
+  width: 48px; /* Aumenta el tamaño del contenedor */
+}
+
+.listado {
+  padding: 0%;
+}
+
+.otros-submenu {
+  padding: 0%;
+}
+
+/*----------------Barra Lateral*/
+.barra-lateral {
+  background-color: var(--color-barra-lateral);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 20px 15px;
+  position: fixed;
+  transition: width 0.5s ease, background-color 0.3s ease, left 0.5s ease;
+  width: 250px;
+  z-index: 50;
+}
+
+.mini-barra-lateral {
+  width: 80px;
+}
+.barra-lateral span {
+  font-size: 18px;
+  opacity: 1;
+  text-align: left;
+  transition: opacity 0.5s ease, width 0.5s ease;
+  white-space: nowrap;
+  width: 100px;
+}
+.barra-lateral span.oculto {
+  opacity: 0;
+  width: 0;
+}
+
+/*------------> Nombre de la página */
+.barra-lateral .nombre-pagina {
+  align-items: center;
+  color: var(--color-texto);
+  display: flex;
+  height: 45px;
+  margin-bottom: 40px;
+  width: 100%;
+}
+.barra-lateral .nombre-pagina ion-icon {
+  cursor: pointer;
+  font-size: 40px;
+  min-width: 50px;
+}
+.barra-lateral .nombre-pagina span {
+  font-size: 25px;
+  margin-left: 5px;
+}
+
+.img {
+  width: 30px;
+}
+
+ul {
+  list-style: none;
+  margin-bottom: 0;
+  padding-left: 0px;
+}
+
+.funa {
+  font-size: 0.9em !important;
+}
+
+.largo {
+  font-size: 14px !important;
+}
+
+/*------------> Botón*/
+.barra-lateral .boton {
+  align-items: center;
+  background-color: var(--sidebar-color);
+  border: none;
+  border-radius: 10px;
+  color: var(--text-color);
+  display: flex;
+  height: 45px;
+  justify-content: center;
+  margin-bottom: 20px;
+  width: 100%;
+}
+.barra-lateral .boton ion-icon {
+  font-size: 25px;
+  min-width: 50px;
+}
+
+/*--------------> Buscar */
+.buscar {
+  background-color: var(--sidebar-color);
+  border: none;
+  color: var(--text-color);
+  outline: none;
+  transition: width 0.5s ease;
+  width: 100%;
+}
+
+/*--------------> Menu Navegación*/
+.barra-lateral .navegacion {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.barra-lateral .navegacion::-webkit-scrollbar {
+  width: 5px;
+}
+.barra-lateral .navegacion::-webkit-scrollbar-thumb {
+  background-color: var(--color-scroll);
+  border-radius: 5px;
+}
+.barra-lateral .navegacion::-webkit-scrollbar-thumb:hover {
+  background-color: var(--color-scroll-hover);
+}
+.barra-lateral .navegacion li {
+  /* display: flex;   */
+  list-style: none;
+  margin-bottom: 5px;
+}
+.barra-lateral .navegacion a {
+  align-items: center;
+  border-radius: 10px;
+  color: var(--color-texto-menu);
+  display: flex;
+  height: 45px;
+  text-decoration: none;
+  width: 100%;
+}
+.barra-lateral .navegacion a:hover {
+  background-color: var(--color-menu-hover);
+  color: var(--color-menu-hover-texto);
+}
+.barra-lateral .navegacion ion-icon {
+  font-size: 20px;
+  min-width: 50px;
+}
+
+/*-----------------> Linea*/
+.barra-lateral .linea {
+  background-color: var(--color-linea);
+  height: 1px;
+  margin-top: 15px;
+  width: 100%;
+}
+
+/* Submenú */
+.otros-submenu {
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Agrega sombra para estilo */
+  display: none;
+  left: 0;
+  position: relative;
+  top: 100%; /* Cambia esto para ajustar la distancia vertical */
+  width: 100%;
+  z-index: 2; /* Asegúrate de que el submenú esté sobre otros elementos */
+}
+
+.navegacion > ul > li {
+  position: relative;
+}
+
+.flecha-rotada {
+  transform: rotate(180deg); /* Rota la flecha */
+  transition: transform 0.3s ease; /* Agrega una transición suave */
+}
+/* Estilo para mostrar el submenú cuando se activa */
+#otros-toggle:focus + .otros-submenu {
+  display: block;
+}
+
+/*----------------> Cerrar sesion*/
+.cerrar-sesion {
+  order: 9999; /* Un valor alto para garantizar que esté al final */
+}
+
+/*----------------> Modo Oscuro*/
+.barra-lateral .modo-oscuro {
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 80px;
+  width: 100%;
+}
+.barra-lateral .modo-oscuro .info {
+  align-items: center;
+  color: var(--color-texto-menu);
+  display: flex;
+  height: 45px;
+  overflow: hidden;
+  width: 150px;
+}
+.barra-lateral .modo-oscuro ion-icon {
+  font-size: 20px;
+
+  width: 50px;
+}
+
+/*--->switch*/
+.barra-lateral .modo-oscuro .switch {
+  align-items: center;
+  cursor: pointer;
+  display: flex;
+  height: 45px;
+  justify-content: center;
+  min-width: 50px;
+}
+.barra-lateral .modo-oscuro .base {
+  align-items: center;
+  background-color: var(--color-switch-base);
+  border-radius: 50px;
+  display: flex;
+  height: 20px;
+  position: relative;
+  width: 35px;
+}
+.barra-lateral .modo-oscuro .circulo {
+  background-color: var(--color-switch-circulo);
+  border-radius: 50%;
+  height: 90%;
+  left: 2px;
+  position: absolute;
+  transition: left 0.5s ease;
+  width: 18px;
+}
+.barra-lateral .modo-oscuro .circulo.prendido {
+  left: 15px;
+}
+
+/*---------------> Usuario*/
+.barra-lateral .usuario {
+  display: flex;
+  width: 100%;
+}
+.barra-lateral .usuario img {
+  border-radius: 10px;
+  min-width: 50px;
+  width: 50px;
+}
+.barra-lateral .usuario .info-usuario {
+  align-items: center;
+  color: var(--color-texto);
+  display: flex;
+  justify-content: space-between;
+  overflow: hidden;
+  width: 100%;
+}
+.barra-lateral .usuario .nombre-email {
+  display: flex;
+  flex-direction: column;
+  margin-left: 5px;
+  width: 100%;
+}
+.barra-lateral .usuario .nombre {
+  font-size: 15px;
+  font-weight: 600;
+}
+.barra-lateral .usuario .email {
+  font-size: 13px;
+}
+.barra-lateral .usuario ion-icon {
+  font-size: 20px;
+}
+
+/*-------------main*/
+
+/* #inbox{
+    background-color: var(--color-menu-hover);
+    color: var(--color-menu-hover-texto);
+} */
+.menu-selected {
+  background-color: var(--color-menu-hover);
+  color: var(--color-menu-hover-texto);
+}
+
+main {
+  margin-left: 250px;
+  padding: 20px;
+  transition: margin-left 0.5s ease;
+}
+main.min-main {
+  margin-left: 80px;
+}
+.headerTelefono {
+  display: none;
+}
+
+/*------------------> Responsive*/
+@media (max-height: 660px) {
+  .barra-lateral .nombre-pagina {
+    margin-bottom: 5px;
+  }
+  .barra-lateral .modo-oscuro {
+    margin-bottom: 3px;
+  }
+}
+@media (max-width: 600px) {
+  .barra-lateral {
+    left: -250px;
+    position: fixed;
+  }
+  .max-barra-lateral {
+    left: 0;
+  }
+  .menu {
+    align-items: center;
+    display: flex;
+    position: fixed;
+  }
+
+  .headerTelefono {
+    display: block;
+    font-weight: bold;
+  }
+
+  .menu ion-icon:nth-child(2) {
+    display: none;
+  }
+  main {
+    margin-left: 0;
+  }
+  main.min-main {
+    margin-left: 0;
+  }
+}

@@ -1,0 +1,89 @@
+<template>
+  <div class="player-view">
+    <div class="controls-bar">
+      <button @click="goBack" class="control-button">
+        <img src="@/assets/icons/back.svg" alt="Volver" />
+      </button>
+      <div class="playback-controls">
+        <button class="control-button">
+          <img src="@/assets/icons/rewind.svg" alt="Rewind" />
+        </button>
+        <button class="control-button">
+          <img src="@/assets/icons/play.svg" alt="Play" />
+        </button>
+        <button class="control-button">
+          <img src="@/assets/icons/fast-forward.svg" alt="Fast Forward" />
+        </button>
+        <button class="control-button">
+          <img src="@/assets/icons/volume.svg" alt="Volume" />
+        </button>
+        <button class="control-button">
+          <img src="@/assets/icons/subtitles.svg" alt="Subtitles" />
+        </button>
+        <button class="control-button">
+          <img src="@/assets/icons/audio.svg" alt="Audio Options" />
+        </button>
+        <button class="control-button">
+          <img src="@/assets/icons/playback-speed.svg" alt="Playback Speed" />
+        </button>
+        <button class="control-button">
+          <img src="@/assets/icons/fullscreen.svg" alt="Fullscreen" />
+        </button>
+      </div>
+    </div>
+  </div>
+</template>
+
+<script lang="ts">
+import { defineComponent } from "vue";
+
+export default defineComponent({
+  name: "PlayerView",
+  methods: {
+    goBack() {
+      this.$router.go(-1);
+    },
+  },
+});
+</script>
+
+<style scoped>
+.player-view {
+  position: relative;
+  background-color: black;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.controls-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.playback-controls {
+  display: flex;
+  gap: 10px;
+}
+
+.control-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.control-button img {
+  width: 24px;
+  height: 24px;
+}
+</style>

@@ -1,0 +1,58 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@500&display=swap");
+
+:root {
+  --body-color: #eff0f1;
+  --text-color: #444343;
+  --sidebar-color: #fff;
+
+  --color-barra-lateral: rgb(255, 255, 255);
+
+  --color-texto: rgb(0, 0, 0);
+  --color-texto-menu: rgb(134, 136, 144);
+
+  --color-menu-hover: rgb(238, 238, 238);
+  --color-menu-hover-texto: rgb(0, 0, 0);
+
+  --color-boton: rgb(0, 0, 0);
+  --color-boton-texto: rgb(255, 255, 255);
+
+  --color-linea: rgb(180, 180, 180);
+
+  --color-switch-base: rgb(201, 202, 206);
+  --color-switch-circulo: rgb(241, 241, 241);
+
+  --color-scroll: rgb(192, 192, 192);
+  --color-scroll-hover: rgb(134, 134, 134);
+}
+
+body.dark-mode {
+  --body-color: #18191a;
+  --text-color: #ccc;
+  --sidebar-color: #242526;
+
+  --color-barra-lateral: rgb(44, 45, 49);
+
+  --color-texto: rgb(255, 255, 255);
+  --color-texto-menu: rgb(110, 110, 117);
+
+  --color-menu-hover: rgb(0, 0, 0);
+  --color-menu-hover-texto: rgb(238, 238, 238);
+
+  --color-boton: rgb(255, 255, 255);
+  --color-boton-texto: rgb(0, 0, 0);
+
+  --color-linea: rgb(90, 90, 90);
+
+  --color-switch-base: rgb(39, 205, 64);
+  --color-switch-circulo: rgb(255, 255, 255);
+
+  --color-scroll: rgb(68, 69, 74);
+  --color-scroll-hover: rgb(85, 85, 85);
+}
+
+.container {
+  background-color: var(--sidebar-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 50px;
+}

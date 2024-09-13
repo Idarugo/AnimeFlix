@@ -1,0 +1,76 @@
+.container {
+  background-color: var(--sidebar-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 50px;
+}
+
+.stats {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+}
+.chart {
+  background-color: var(--sidebar-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.card {
+  background-color: var(--sidebar-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.testimonios {
+  background-color: var(--sidebar-color);
+}
+
+.blogs {
+  background-color: var(--sidebar-color);
+}
+
+.contactos {
+  background-color: var(--sidebar-color);
+}
+
+.trabajadores {
+  background-color: var(--sidebar-color);
+}
+
+.container h1 {
+  color: var(--text-color);
+  margin-bottom: 20px;
+}
+
+.lista {
+  padding-left: 0%;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+ul li:last-child {
+  border-bottom: none;
+}
+
+ul li p {
+  margin: 0;
+}
+
+ul li p strong {
+  color: #333;
+}
+
+ul li p small {
+  color: #666;
+}
+
+ul li h3 {
+  color: #333;
+  margin-top: 0;
+}

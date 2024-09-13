@@ -1,0 +1,14 @@
+{
+    "hello": "Hola",
+    "welcome": "Bienvenido a AnimeFlix",
+    "featured_anime": "Anime Destacado",
+    "recently_watched": "Visto Recientemente",
+    "search_results": "Resultados de la Búsqueda",
+    "recommended_for_you": "Recomendados para Ti",
+    "new_releases": "Nuevos Lanzamientos",
+    "no_recently_watched": "No has visto ningún anime recientemente.",
+    "no_search_results": "No se encontraron animes.",
+    "no_recommendations": "No hay recomendaciones disponibles.",
+    "no_new_releases": "No se encontraron nuevos lanzamientos."
+  }
+  

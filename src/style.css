@@ -1,0 +1,102 @@
+:root[data-theme="light"] {
+  --background-color: #ffffff;
+  --text-color: #000000;
+  --navbar-background: #f8f9fa;
+  --link-color: #007bff;
+  --link-hover-color: #0056b3;
+  --carousel-background-color: #e9ecef;
+  --hero-banner-background: #f8f9fa;
+}
+
+:root[data-theme="dark"] {
+  --background-color: #141414;
+  --text-color: #ffffff;
+  --navbar-background: #141414;
+  --link-color: #e50914;
+  --link-hover-color: #f40612;
+  --carousel-background-color: #222222;
+  --hero-banner-background: #141414;
+}
+
+/* Estilos generales para el cuerpo y HTML */
+body,
+html {
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: "Poppins", sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Asegúrate de que el contenedor principal ocupe la altura completa */
+#app {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+/* Ajustes específicos de la página principal */
+.home {
+  background-color: var(--background-color);
+  padding-bottom: 20px;
+  padding-top: 80px; /* Ajuste de padding-top para evitar superposición */
+}
+
+/* Estilo del banner principal */
+.hero-banner {
+  align-items: center;
+  background-color: var(--hero-banner-background);
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  max-height: 50vh; /* Controla la altura máxima del HeroBanner */
+  overflow: hidden;
+}
+
+.hero-banner img {
+  max-height: 100%;
+  object-fit: cover; /* Asegura que la imagen cubra todo el espacio disponible */
+  width: 100%;
+}
+
+/* Ajuste de los carruseles */
+.carousel-wrapper {
+  background-color: var(--carousel-background-color);
+  display: flex;
+  overflow-x: auto;
+  padding: 20px 0; /* Agrega espacio alrededor del carrusel */
+}
+
+.carousel-item {
+  margin-right: 20px;
+  min-width: 200px;
+}
+
+.anime-image {
+  border-radius: 10px;
+  height: auto;
+  object-fit: cover; /* Asegura que la imagen se ajuste bien */
+  width: 100%;
+}
+
+/* Efecto Hover en Imágenes */
+img {
+  transition: transform 0.3s ease;
+}
+
+img:hover {
+  transform: scale(1.05); /* Efecto de zoom en la imagen */
+}
+
+/* Efecto Hover en Botones */
+button {
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  background-color: #ff6f61; /* Cambia el color de fondo del botón */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Agrega una sombra */
+}

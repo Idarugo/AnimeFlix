@@ -1,0 +1,48 @@
+{
+  "name": "anime-page",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.6.0",
+    "@fortawesome/free-brands-svg-icons": "^6.6.0",
+    "@fortawesome/free-solid-svg-icons": "^6.6.0",
+    "@fortawesome/vue-fontawesome": "^3.0.8",
+    "@popperjs/core": "^2.11.8",
+    "@vueuse/components": "^11.0.3",
+    "animeflv-api": "^2.0.0",
+    "axios": "^1.7.5",
+    "bcrypt": "^5.1.1",
+    "bootstrap": "^5.3.3",
+    "chart.js": "^4.4.4",
+    "cors": "^2.8.5",
+    "express": "^4.19.2",
+    "ionicons": "^7.4.0",
+    "jsonwebtoken": "^9.0.2",
+    "multer": "^1.4.5-lts.1",
+    "pinia": "^2.2.2",
+    "sweetalert2": "^11.12.4",
+    "video.js": "^8.17.3",
+    "vue": "^3.4.37",
+    "vue-chartjs": "^5.3.1",
+    "vue-i18n": "^9.14.0",
+    "vue-meta": "^3.0.0-alpha.2",
+    "vue-router": "^4.4.3",
+    "vue3-virtual-scroller": "^0.2.3"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/multer": "^1.4.12",
+    "@types/node": "^22.5.0",
+    "@vitejs/plugin-vue": "^5.1.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.4",
+    "vite": "^5.4.1",
+    "vue-tsc": "^2.0.29"
+  }
+}
